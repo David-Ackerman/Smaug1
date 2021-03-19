@@ -35,12 +35,15 @@ Para usar esse projeto em conjunto com o git
 - Quando quiser salvar suas alterações no repositorio abra novamente o terminal do git na pasta do projeto e siga os passsos abaixo
 
   - Adicione suas alterações com o comando `git add .`
+
     ![add your changes](./readmiFiles/addYourChanges.PNG)
 
   - faça o commit delas (cria um ponto de alteração no repositorio) com o comando `git commit -m "your message here"`
+
     ![commit your changes](./readmiFiles/commitYourChanges.PNG)
 
   - Faça o push das suas alterações com o comando `git push`, esse comando envia suas alterações para a pagina do projeto, se for seu primeiro push o git vai sugerir um comando para usar no lugar do push, execute ele como o exemplo abaixo
+
     ![first push error](./readmiFiles/firstPushError.PNG)
     ![push your changes](./readmiFiles/firstPush.PNG)
 
@@ -52,7 +55,7 @@ Para usar esse projeto em conjunto com o git
 
 - Abra um pull request clicando no botão conforme a imagem
 
-  ![made a pull request](./readmiFiles/madApr.PNG)
+  ![made a pull request](./readmiFiles/madeApr.PNG)
 
 - De um titulo para o seu pull request e caso ache necessario adicione alguns comentarios no campo abaixo do titulo
 
