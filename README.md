@@ -11,8 +11,8 @@ Para usar esse projeto em conjunto com o git
 Depois, va para o site do [Projeto](https://github.com/David-Ackerman/Smaug1) e
 clique no botão de download e copie a url que é exibida conforme a imagem abaixo.
 
-![get Clone url](./readmiFiles/clone.png)
+![get Clone url](./readmiFiles/clone.PNG)
 
 Abra seu terminal do git na pasta em que você deseja deixar o projeto e digite o comando `git clone yourUrl` como no exemplo abaixo
 
-![Clone project](./readmiFiles/cloneCommand.png)
+![Clone project](./readmiFiles/cloneCommand.PNG)
