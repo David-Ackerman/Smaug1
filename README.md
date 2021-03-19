@@ -6,7 +6,7 @@ Para usar esse projeto em conjunto com o git
 
 [Github para desktop](https://desktop.github.com/)
 
-[Git CLI](https://desktop.github.com/)
+[Git CLI](https://git-scm.com/downloads)
 
 ## Exemplo usando o git cli
 
