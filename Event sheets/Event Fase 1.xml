@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Fase 1</name>
+    <events>
+        <variable constant="0" name="GearQuantity" sid="757688215313604" static="0" type="number">0</variable>
+        <variable constant="0" name="TimeLeft" sid="645346753752358" static="0" type="number">60</variable>
+        <variable constant="0" name="Health" sid="945504428903681" static="0" type="number">3</variable>
+        <variable constant="0" name="Coins" sid="857616117570499" static="0" type="number">0</variable>
+        <event-block sid="796788390885832">
+            <conditions>
+                <condition id="2" name="Key is down" sid="479076244338870" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="282436664535002" type="MainCharacter">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="652602511321273" type="MainCharacter">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="704616330601054">
+            <conditions>
+                <condition id="2" name="Key is down" sid="766171845735037" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="832054954777316" type="MainCharacter">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="694559328678697" type="MainCharacter">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="531201965291772">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="821437328582639" type="Keyboard">
+                    <param id="0" name="Key">74</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="239436258120232" type="MainCharacter">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="598386591082569">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="457597023463112" type="MainCharacter" />
+                <condition behavior="Platform" id="0" name="Is moving" sid="597284318786506" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="917515579273552" type="MainCharacter">
+                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="487395395811111">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="330238436816168" type="MainCharacter" />
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="128570429377775" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="990923463710397" type="MainCharacter">
+                    <param id="0" name="Animation">&quot;stand&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="699983682270264">
+            <conditions>
+                <condition behavior="Platform" id="5" name="On jump" sid="279642107712432" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="358042166270078" type="MainCharacter">
+                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="255692528320076">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="415756563305540" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="363549542513608" type="DisplayCoins">
+                    <param id="0" name="Text">&quot;Coins: &quot; &amp; Coins</param>
+                </action>
+                <action id="0" name="Set text" sid="943697871954316" type="DisplayHealth">
+                    <param id="0" name="Text">&quot;Health: &quot; &amp; Health</param>
+                </action>
+                <action id="0" name="Set text" sid="182702110867349" type="DisplayTime">
+                    <param id="0" name="Text">&quot;Time: &quot; &amp; TimeLeft</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="858792968701042">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="542386240197658" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="166092069173094" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="534140898179823" type="System">
+                    <param id="0" name="Variable">TimeLeft</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="231720711165939">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="104640415947094" type="System">
+                    <param id="0" name="Variable">TimeLeft</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="393196039361415" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="960747366454074" type="Message">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="563780983296782" type="Message">
+                    <param id="0" name="Animation">&quot;lose&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="964084015012477" type="MainCharacter" />
+            </actions>
+        </event-block>
+        <event-block sid="766246571086534">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="298849756570946" type="MainCharacter">
+                    <param id="0" name="Object">Coin</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="558264017062049" type="System">
+                    <param id="0" name="Variable">Coins</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="977062993811767" type="Coin">
+                    <param id="0" name="Object">Sparkle</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="102125215269632" type="Coin" />
+                <action id="4" name="Set animation" sid="673757983540136" type="Sparkle">
+                    <param id="0" name="Animation">&quot;yellow&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="934055982056382" type="Audio">
+                    <param id="0" name="Audio file">coin</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="846040697234868">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="288655671458186" type="MainCharacter">
+                    <param id="0" name="Object">Heart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="356856864640115" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="188950634243984" type="Heart" />
+                <action id="0" name="Spawn another object" sid="135190419174839" type="Heart">
+                    <param id="0" name="Object">Sparkle</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="822993874736620" type="Sparkle">
+                    <param id="0" name="Animation">&quot;red&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="805047991528628" type="Audio">
+                    <param id="0" name="Audio file">item-pickup</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="812741490931564">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="816788059679401" type="MainCharacter">
+                    <param id="0" name="Object">Gear</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="254220272146239" type="System">
+                    <param id="0" name="Variable">TimeLeft</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+                <action id="-9" name="Destroy" sid="757009584296204" type="Gear" />
+                <action id="-10" name="Add to" sid="453365395121791" type="System">
+                    <param id="0" name="Variable">GearQuantity</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="950015991058535" type="Gear">
+                    <param id="0" name="Object">Sparkle</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="960756906839844" type="Sparkle">
+                    <param id="0" name="Animation">&quot;green&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="757169433492357" type="Audio">
+                    <param id="0" name="Audio file">item-pickup</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="468101904183193">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="353807202653312" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="969441617708905" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="465822589125759" type="Message">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="926860229478717" type="Message">
+                    <param id="0" name="Animation">&quot;lose&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="476704878674061" type="MainCharacter" />
+            </actions>
+        </event-block>
+        <event-block sid="712513047641649">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="969459712107259" type="MainCharacter">
+                    <param id="0" name="Object">Bushes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="183211493694172" type="Bushes">
+                    <param id="0" name="Object">Ghost</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="945548103706547" type="Ghost">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-2" name="Set Y" sid="490837914804763" type="Ghost">
+                    <param id="0" name="Y">333</param>
+                </action>
+                <action id="0" name="Play" sid="259364663782609" type="Audio">
+                    <param id="0" name="Audio file">ghost</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="667274132303285">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="378824857988735" type="MainCharacter">
+                    <param id="0" name="Object">Ghost</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="213445594706400" type="System">
+                    <param id="0" name="Variable">GearQuantity</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="337261342334129" type="Message">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="714699581334767" type="Message">
+                    <param id="0" name="Animation">&quot;win&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="332527234159508" type="MainCharacter" />
+                <action id="0" name="Spawn another object" sid="188753694276470" type="Ghost">
+                    <param id="0" name="Object">Sparkle</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="547214743726472" type="Sparkle">
+                    <param id="0" name="Animation">&quot;white&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="125331290476542" type="Ghost" />
+                <action id="-16" name="Wait" sid="994101738763172" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="465883858800008" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="563755598284437">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="329086357980725" type="MainCharacter">
+                    <param id="0" name="Object">Brick</param>
+                </condition>
+                <condition id="9" name="Is overlapping at offset" sid="337837228872276" type="MainCharacter">
+                    <param id="0" name="Object">Brick</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">-10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="832441277633569" type="Brick" />
+                <action id="0" name="Spawn another object" sid="601366639970132" type="Brick">
+                    <param id="0" name="Object">Coin</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="531289573422064" type="Brick">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="213542685778225" type="Particles">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action id="0" name="Play" sid="521350752437595" type="Audio">
+                    <param id="0" name="Audio file">brick-break</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="961466052417633">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="711251788025476" type="MainCharacter">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+                <condition behavior="Platform" id="4" name="Is falling" sid="250240395972507" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="387101367086919" type="Enemy" />
+                <action behavior="Platform" id="9" name="Set vector Y" sid="519186310850198" type="MainCharacter">
+                    <param id="0" name="Vector Y">-400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="239981526503434">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="930291442521320" type="MainCharacter">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="422005168786421" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="629331249505454" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="449645049685561" type="MainCharacter">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="537929215816776">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="752789631286744" type="MainCharacter">
+                    <param id="0" name="Object">Enemy2</param>
+                </condition>
+                <condition behavior="Platform" id="4" name="Is falling" sid="260264585010371" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="346142499409918" type="Enemy2" />
+                <action behavior="Platform" id="9" name="Set vector Y" sid="181220596875152" type="MainCharacter">
+                    <param id="0" name="Vector Y">-400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="239608115264984">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="123748227893663" type="MainCharacter">
+                    <param id="0" name="Object">Enemy2</param>
+                </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="481897317761144" type="MainCharacter" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="173036690387218" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="975305330865252" type="MainCharacter">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="129625936939554">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="480147015401081" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="250693335253754" type="Audio">
+                    <param id="0" name="Audio file">game music</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="166424714367071">
+            <conditions />
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -20,6 +20,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -27,8 +28,10 @@
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -104,6 +107,13 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\alien_dark_gray\alien_dark_gray\darkgray__0007_walk_2.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501149" original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\alien_dark_gray\alien_dark_gray\darkgray__0011_walk_6.png" />
                     <frame duration="1" hotspotX="0.502591" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\alien_dark_gray\alien_dark_gray\darkgray__0006_walk_1.png" />
+                </animation>
+                <animation framecount="5" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="761567829895873" speed="25">
+                    <frame duration="1" hotspotX="0.502222" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\alien_dark_gray\alien_dark_gray\darkgray__0021_hurt_4.png" />
+                    <frame duration="1" hotspotX="0.501441" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\alien_dark_gray\alien_dark_gray\darkgray__0022_dead_1.png" />
+                    <frame duration="1" hotspotX="0.501211" hotspotY="0.50152" original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\alien_dark_gray\alien_dark_gray\darkgray__0023_dead_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502075" original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\alien_dark_gray\alien_dark_gray\darkgray__0024_dead_3.png" />
+                    <frame duration="1" hotspotX="0.501222" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\alien_dark_gray\alien_dark_gray\darkgray__0025_dead_4.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -221,8 +231,8 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852937336889039" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\round_ghost\round ghost idle\sprite_0.png">
+                <animation framecount="12" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852937336889039" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.32" y="0.32" />
                             <point x="0.5" y="0.26" />
@@ -234,6 +244,17 @@
                             <point x="0.24" y="0.5" />
                         </collision-poly>
                     </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -471,7 +492,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="32" loop="0" name="white" pingpong="0" repeatcount="1" repeatto="0" sid="145543726918990" speed="32">
+                <animation framecount="32" loop="0" name="white" pingpong="0" repeatcount="1" repeatto="0" sid="145543726918990" speed="8">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -553,12 +574,398 @@
         <object-type name="Audio" sid="214679444718531">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="TiledBackground" sid="843918665015973">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\Background\JWDLx5AZBtIScaleSepiaCortnado.png" />
+        </object-type>
+        <object-type name="Tree" sid="667942656256363">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="438181593288878" speed="5">
+                    <frame duration="1" hotspotX="0.50018" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\purple-leaf-plum.png">
+                        <collision-poly>
+                            <point x="0" y="0.314483" />
+                            <point x="0.49982" y="0.0195281" />
+                            <point x="0.842143" y="0.1786" />
+                            <point x="0.928443" y="0.682262" />
+                            <point x="0.488314" y="0.694061" />
+                            <point x="0.159295" y="0.721318" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap2" sid="522226780340250">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="172611706933104">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Cristiane Andrade\Documents\Smaug\GameAssets\OPP Assets\Tiles\Snow\qmO7qEB.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Raven" sid="192540006479972">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Wrap" sid="697131188322704">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="693302880041666">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="25" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212200662498201" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0001.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0002.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0003.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0004.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0005.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0006.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0007.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0008.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0009.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0010.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0011.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0012.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0013.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0014.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0015.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0016.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0017.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0018.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0019.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0020.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0021.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0022.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0023.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0024.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\all (1)\raven-black0025.png">
+                        <collision-poly>
+                            <point x="0.298828" y="0.298828" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.756836" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.336914" y="0.663086" />
+                            <point x="0.174805" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="box" sid="865633187546943">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="393682942847810">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Jumpthru" sid="902691029977746">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="711397244594957">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="556917414833376" speed="5">
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Cristiane Andrade\Downloads\box.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ExplosionRaven" sid="621289312096370">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="707270086990327">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="32" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="886250879135856" speed="32">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
+        <layout>Layout Fase 1.xml</layout>
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
+        <event-sheet>Event Fase 1.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
@@ -585,9 +992,12 @@
         <file name="brick-break.ogg" />
         <file name="item-pickup.m4a" />
         <file name="item-pickup.ogg" />
+        <file name="coin.m4a" />
+        <file name="coin.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="short_The Enchanting Haunted Ballroom.ogg" />
+        <file name="game music.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
