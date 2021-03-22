@@ -10,8 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Layout 1</layout>
-        <event-sheet order="1">Event sheet 1</event-sheet>
+        <layout active="1" order="0">Layout Fase 1</layout>
+        <layout order="2">Layout 1</layout>
+        <event-sheet order="1">Event Fase 1</event-sheet>
+        <event-sheet order="3">Event sheet 1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -21,10 +23,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1" />
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
@@ -42,5 +44,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Enemy2/" />
         <folder expanded="1" path="animation-folder/Sparkle/" />
         <folder expanded="1" path="animation-folder/Explosion/" />
+        <folder expanded="1" path="animation-folder/Tree/" />
+        <folder expanded="1" path="animation-folder/Raven/" />
+        <folder expanded="1" path="animation-folder/box/" />
+        <folder expanded="1" path="animation-folder/ExplosionRaven/" />
     </folders-expanded>
 </c2uistate>
